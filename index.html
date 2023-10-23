@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Crawler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: rgb(126, 126, 227);
+        }
+
+        h1 {
+            margin-top: 10%;
+            text-align: center;
+            font-size: 75px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 4%;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10%;
+        }
+
+        .crawled-urls {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #crawled-urls-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .url-item {
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Web Crawler</h1>
+    <form action="/crawl" method="GET" class="search-bar">
+        <input type="text" id="url-input" placeholder="Enter URL" name="path" value="">
+        <select name="customer_type">
+            <option value="paying">Paying Customer</option>
+            <option value="non-paying">Non-Paying Customer</option>
+        </select>
+        <button type="submit">Crawl</button>
+    </form>
+    <div class="crawled-urls">
+        <h2>Crawled URLs:</h2>
+        <div id="crawled-urls-container">
+            {{range .CrawledURLs}}
+            <div class="url-item"><a href="{{.}}" target="_blank">{{.}}</a></div>
+            {{end}}
+        </div>
+    </div>
+</body>
+
+</html>
