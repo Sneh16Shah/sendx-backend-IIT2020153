@@ -1,7 +1,7 @@
 # Sendx-backend-IIT2020153
 
 ## Description
-Completed the backend heacy assignment and completed the requirement given by sendx.
+Completed the backend heavy assignment and completed the requirement given by sendx.
 Requirement:
 Pages at times may not be available so you may have to retry 
 The application may have paying customers and non paying customers. So your server needs to always give priority for crawling to paying customers. For simplicity you can differentiate between paying and non paying customers via query parameter being passed to the backend from the frontend API call.
