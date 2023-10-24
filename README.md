@@ -1,4 +1,4 @@
-# sendx-backend-IIT2020153
+# Sendx-backend-IIT2020153
 
 ## Description
 Completed the backend heacy assignment and completed the requirement given by sendx.
